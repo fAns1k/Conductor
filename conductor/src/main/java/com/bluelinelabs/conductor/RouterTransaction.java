@@ -27,6 +27,11 @@ public class RouterTransaction {
         return new RouterTransaction(controller);
     }
 
+    @NonNull
+    public static RouterTransaction restore(@NonNull Bundle instanceState) {
+        return new RouterTransaction(instanceState);
+    }
+
     private RouterTransaction(@NonNull Controller controller) {
         this.controller = controller;
     }
